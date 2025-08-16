@@ -1,28 +1,51 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Experience from './pages/Experience';
-import Projects from './pages/Projects';
-import Interests from './pages/Interests';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './components/About';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+import Skills from './components/Skills';
+import Contact from './components/Contact';
 
 function App() {
+  const [activeSection, setActiveSection] = useState('home');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['home', 'about', 'experience', 'projects', 'skills', 'contact'];
+      const scrollPosition = window.scrollY + 100;
+
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const offsetTop = element.offsetTop;
+          const offsetHeight = element.offsetHeight;
+
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <Router>
-      <div className="App">
-        <Navbar />
-        <AnimatePresence mode="wait">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/experience" element={<Experience />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/interests" element={<Interests />} />
-          </Routes>
-        </AnimatePresence>
-      </div>
-    </Router>
+    <div className="App">
+      <Navbar activeSection={activeSection} />
+      <main>
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <Skills />
+        <Contact />
+      </main>
+    </div>
   );
 }
 

@@ -1,66 +1,251 @@
 .App {
   min-height: 100vh;
-  background: var(--primary);
+  background: var(--bg-primary);
+}
+
+main {
+  padding-top: 80px; /* Account for fixed navbar */
+}
+
+/* Section styling */
+section {
+  padding: 80px 0;
   position: relative;
 }
 
-/* Background animation */
-.App::before {
-  content: '';
-  position: fixed;
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Grid layouts */
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+  }
+  
+  section {
+    padding: 60px 0;
+  }
+  
+  .section-container {
+    padding: 0 16px;
+  }
+}
+
+/* Floating elements animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Particle effect background */
+.particles {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: 
-    radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(255, 107, 107, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(102, 126, 234, 0.05) 0%, transparent 50%);
-  pointer-events: none;
+  overflow: hidden;
   z-index: -1;
-  animation: backgroundFloat 20s ease-in-out infinite;
 }
 
-@keyframes backgroundFloat {
-  0%, 100% {
-    transform: translate(0, 0) scale(1);
-  }
-  33% {
-    transform: translate(-10px, -10px) scale(1.05);
-  }
-  66% {
-    transform: translate(10px, 10px) scale(0.95);
-  }
+.particle {
+  position: absolute;
+  background: var(--accent-blue);
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: float 8s infinite linear;
 }
 
-/* Page transitions */
-.page-enter {
-  opacity: 0;
-  transform: translateY(20px);
+.particle:nth-child(1) {
+  width: 4px;
+  height: 4px;
+  left: 10%;
+  animation-delay: 0s;
+  animation-duration: 8s;
 }
 
-.page-enter-active {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.3s, transform 0.3s;
+.particle:nth-child(2) {
+  width: 6px;
+  height: 6px;
+  left: 20%;
+  animation-delay: 2s;
+  animation-duration: 10s;
 }
 
-.page-exit {
-  opacity: 1;
-  transform: translateY(0);
+.particle:nth-child(3) {
+  width: 3px;
+  height: 3px;
+  left: 30%;
+  animation-delay: 4s;
+  animation-duration: 12s;
 }
 
-.page-exit-active {
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: opacity 0.3s, transform 0.3s;
+.particle:nth-child(4) {
+  width: 5px;
+  height: 5px;
+  left: 40%;
+  animation-delay: 6s;
+  animation-duration: 9s;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-  .App::before {
-    background: 
-      radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.05) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, rgba(255, 107, 107, 0.05) 0%, transparent 50%);
-  }
+.particle:nth-child(5) {
+  width: 4px;
+  height: 4px;
+  left: 50%;
+  animation-delay: 8s;
+  animation-duration: 11s;
+}
+
+.particle:nth-child(6) {
+  width: 6px;
+  height: 6px;
+  left: 60%;
+  animation-delay: 10s;
+  animation-duration: 7s;
+}
+
+.particle:nth-child(7) {
+  width: 3px;
+  height: 3px;
+  left: 70%;
+  animation-delay: 12s;
+  animation-duration: 13s;
+}
+
+.particle:nth-child(8) {
+  width: 5px;
+  height: 5px;
+  left: 80%;
+  animation-delay: 14s;
+  animation-duration: 8s;
+}
+
+.particle:nth-child(9) {
+  width: 4px;
+  height: 4px;
+  left: 90%;
+  animation-delay: 16s;
+  animation-duration: 10s;
+}
+
+/* Gradient borders */
+.gradient-border {
+  position: relative;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 2px;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 12px;
+  padding: 2px;
+  background: var(--gradient-primary);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+}
+
+/* Code block styling */
+.code-block {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-x: auto;
+  position: relative;
+}
+
+.code-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-primary);
+  border-radius: 8px 8px 0 0;
+}
+
+/* Highlight effect */
+.highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent-blue);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.highlight:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
