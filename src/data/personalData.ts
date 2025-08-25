@@ -61,25 +61,25 @@ export interface PersonalData {
 }
 
 export const personalData: PersonalData = {
-  name: "Karan",
+  name: "John Doe",
   title: "Full Stack Developer",
   subtitle: "I enjoy building sites & apps. My focus is web development.",
   profileImage: "/images/profile.jpg",
   
   about: {
-    introduction: "Hello, I'm Karan. I'm a full-stack developer with experience in modern web technologies. I enjoy building sites & apps. My focus is web development.",
+    introduction: "Hello, I'm John. I'm a full-stack developer with experience in modern web technologies. I enjoy building sites & apps. My focus is web development.",
     story: "I have a passion for creating beautiful, functional, and user-centered digital experiences. I am always looking for new and innovative ways to bring my clients' visions to life. I believe that design is about more than just making things look pretty – it's about solving problems and creating intuitive, enjoyable experiences for users.",
     education: "I studied Computer Science and have been working in the field for several years, constantly learning and adapting to new technologies.",
     interests: ["Web Development", "UI/UX Design", "Open Source", "Reading", "Traveling"]
   },
   
-  email: "karan@example.com",
+  email: "john.doe@example.com",
   phone: "+1 (555) 123-4567",
   
   socialLinks: [
     {
       name: "LinkedIn",
-      url: "https://linkedin.com/in/yourusername",
+      url: "https://linkedin.com/in/johndoe",
       icon: "linkedin"
     }
   ],
@@ -88,7 +88,7 @@ export const personalData: PersonalData = {
     {
       id: "1",
       title: "Senior Full Stack Developer",
-      company: "Tech Company",
+      company: "Tech Solutions Inc",
       location: "San Francisco, CA",
       period: "2023 - Present",
       description: "Leading development of web applications using React, Node.js, and cloud technologies. Mentoring junior developers and implementing best practices.",
@@ -97,8 +97,8 @@ export const personalData: PersonalData = {
     {
       id: "2",
       title: "Full Stack Developer",
-      company: "Startup Inc",
-      location: "San Francisco, CA",
+      company: "Innovation Labs",
+      location: "New York, NY",
       period: "2021 - 2023",
       description: "Built and maintained web applications using modern JavaScript frameworks. Collaborated with design and product teams to deliver high-quality features.",
       technologies: ["React", "JavaScript", "Python", "PostgreSQL", "Git"]
@@ -106,8 +106,8 @@ export const personalData: PersonalData = {
     {
       id: "3",
       title: "Frontend Developer",
-      company: "Digital Agency",
-      location: "San Francisco, CA",
+      company: "Creative Digital Agency",
+      location: "Los Angeles, CA",
       period: "2020 - 2021",
       description: "Developed responsive websites and web applications. Worked closely with designers to implement pixel-perfect designs.",
       technologies: ["HTML", "CSS", "JavaScript", "React", "WordPress"]
@@ -157,7 +157,7 @@ export const personalData: PersonalData = {
       description: "A full-stack e-commerce platform built with React, Node.js, and PostgreSQL. Features include user authentication, product management, shopping cart, and payment integration.",
       image: "/images/projects/ecommerce.jpg",
       technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
-      githubUrl: "https://github.com/yourusername/ecommerce-platform",
+      githubUrl: "https://github.com/johndoe/ecommerce-platform",
       liveUrl: "https://ecommerce-demo.com",
       featured: true
     },
@@ -167,7 +167,7 @@ export const personalData: PersonalData = {
       description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
       image: "/images/projects/task-manager.jpg",
       technologies: ["React", "TypeScript", "Socket.io", "MongoDB", "Express"],
-      githubUrl: "https://github.com/yourusername/task-manager",
+      githubUrl: "https://github.com/johndoe/task-manager",
       liveUrl: "https://task-manager-demo.com",
       featured: true
     },
@@ -177,7 +177,7 @@ export const personalData: PersonalData = {
       description: "A beautiful weather dashboard that displays current weather and forecasts using multiple weather APIs with interactive charts and maps.",
       image: "/images/projects/weather.jpg",
       technologies: ["React", "Chart.js", "OpenWeather API", "CSS3", "Responsive Design"],
-      githubUrl: "https://github.com/yourusername/weather-dashboard",
+      githubUrl: "https://github.com/johndoe/weather-dashboard",
       liveUrl: "https://weather-demo.com",
       featured: false
     },
@@ -187,7 +187,7 @@ export const personalData: PersonalData = {
       description: "A modern, responsive portfolio website built with React and TypeScript, featuring smooth animations and a dark theme.",
       image: "/images/projects/portfolio.jpg",
       technologies: ["React", "TypeScript", "CSS3", "Framer Motion", "Vercel"],
-      githubUrl: "https://github.com/yourusername/portfolio",
+      githubUrl: "https://github.com/johndoe/portfolio",
       liveUrl: "https://portfolio-demo.com",
       featured: false
     },
@@ -197,7 +197,7 @@ export const personalData: PersonalData = {
       description: "A full-featured blog platform with markdown support, user authentication, and admin dashboard for content management.",
       image: "/images/projects/blog.jpg",
       technologies: ["Next.js", "MongoDB", "NextAuth", "Tailwind CSS", "Vercel"],
-      githubUrl: "https://github.com/yourusername/blog-platform",
+      githubUrl: "https://github.com/johndoe/blog-platform",
       liveUrl: "https://blog-demo.com",
       featured: false
     },
@@ -207,7 +207,7 @@ export const personalData: PersonalData = {
       description: "Real-time chat application with private messaging, group chats, and file sharing capabilities.",
       image: "/images/projects/chat.jpg",
       technologies: ["React", "Socket.io", "Node.js", "MongoDB", "AWS S3"],
-      githubUrl: "https://github.com/yourusername/chat-app",
+      githubUrl: "https://github.com/johndoe/chat-app",
       liveUrl: "https://chat-demo.com",
       featured: false
     }
