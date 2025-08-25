@@ -74,7 +74,7 @@ export const personalData: PersonalData = {
   },
   
   email: "john.doe@example.com",
-  phone: "+1 (555) 123-4567",
+  phone: "+1 (123) 456-7890",
   
   socialLinks: [
     {
