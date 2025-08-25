@@ -1,4 +1,4 @@
-# Karan's Personal Website
+# Personal Website Template
 
 A modern, responsive personal portfolio website built with React and TypeScript, featuring a beautiful dark theme with light blue to light purple gradients.
 
@@ -52,7 +52,7 @@ A modern, responsive personal portfolio website built with React and TypeScript,
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd KaranPersonalWebsite
+cd personal-website
 ```
 
 2. Install dependencies:
@@ -90,9 +90,9 @@ All personal information is stored in `src/data/personalData.ts`. Simply update 
 ### Example Configuration
 ```typescript
 export const personalData: PersonalData = {
-  name: "Your Name",
-  title: "Your Title",
-  subtitle: "Your subtitle",
+  name: "John Doe",
+  title: "Full Stack Developer",
+  subtitle: "I enjoy building sites & apps. My focus is web development.",
   profileImage: "/images/profile.jpg",
   
   about: {
@@ -164,7 +164,7 @@ This website is optimized for deployment on platforms like:
 3. Deploy automatically on every push
 
 ### GitHub Pages Deployment
-1. Add `"homepage": "https://yourusername.github.io/repository-name"` to package.json
+1. Add `"homepage": "https://johndoe.github.io/personal-website"` to package.json
 2. Install gh-pages: `npm install --save-dev gh-pages`
 3. Add deploy scripts to package.json:
    ```json

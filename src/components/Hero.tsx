@@ -25,23 +25,17 @@ const Hero: React.FC = () => {
             <p className="hero-subtitle">{personalData.subtitle}</p>
             
             <div className="hero-buttons">
-              <a
-                href="https://linkedin.com/in/karan"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn"
-              >
-                💼&nbsp;&nbsp;LinkedIn
-              </a>
-              
-              <a
-                href="https://github.com/karan"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn"
-              >
-                🐙&nbsp;&nbsp;GitHub
-              </a>
+              {personalData.socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn"
+                >
+                  {social.icon === 'linkedin' ? '💼' : social.icon === 'github' ? '🐙' : '🔗'}&nbsp;&nbsp;{social.name}
+                </a>
+              ))}
               
               <a
                 href="/resume.pdf"

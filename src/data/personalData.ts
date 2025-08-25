@@ -81,6 +81,11 @@ export const personalData: PersonalData = {
       name: "LinkedIn",
       url: "https://linkedin.com/in/johndoe",
       icon: "linkedin"
+    },
+    {
+      name: "GitHub",
+      url: "https://github.com/johndoe",
+      icon: "github"
     }
   ],
   
