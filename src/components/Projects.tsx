@@ -3,48 +3,20 @@ import { personalData } from '../data/personalData';
 import './Projects.css';
 
 const Projects: React.FC = () => {
-  const [filter, setFilter] = useState<'all' | 'featured'>('all');
-
-  const filteredProjects = filter === 'featured' 
-    ? personalData.projects.filter(project => project.featured)
-    : personalData.projects;
-
-  const categories = ['all', 'featured'] as const;
+  const projects = personalData.projects;
 
   return (
     <section id="projects" className="projects section">
       <div className="container">
         <h2 className="section-title">My Projects</h2>
         
-        <div className="projects-filter">
-          {categories.map((category) => (
-            <button
-              key={category}
-              className={`filter-btn ${filter === category ? 'active' : ''}`}
-              onClick={() => setFilter(category)}
-            >
-              {category.charAt(0).toUpperCase() + category.slice(1)}
-              {category === 'featured' && (
-                <span className="featured-count">
-                  ({personalData.projects.filter(p => p.featured).length})
-                </span>
-              )}
-            </button>
-          ))}
-        </div>
-        
         <div className="projects-grid">
-          {filteredProjects.map((project) => (
+          {projects.map((project) => (
             <div key={project.id} className="project-card">
               <div className="project-image">
                 <div className="image-placeholder">
                   <span className="placeholder-icon">💻</span>
                 </div>
-                {project.featured && (
-                  <div className="featured-badge">
-                    <span>⭐ Featured</span>
-                  </div>
-                )}
               </div>
               
               <div className="project-content">
@@ -86,9 +58,9 @@ const Projects: React.FC = () => {
           ))}
         </div>
         
-        {filteredProjects.length === 0 && (
+        {projects.length === 0 && (
           <div className="no-projects">
-            <p>No projects found for the selected filter.</p>
+            <p>No projects found.</p>
           </div>
         )}
       </div>

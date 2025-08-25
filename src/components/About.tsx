@@ -9,7 +9,7 @@ const About: React.FC = () => {
         <h2 className="section-title">About Me</h2>
         
         <div className="about-content">
-          <div className="about-text">
+          <div className="about-text-full">
             <div className="about-intro">
               <p className="intro-text">{personalData.about.introduction}</p>
             </div>
@@ -35,35 +35,13 @@ const About: React.FC = () => {
             </div>
           </div>
           
-          <div className="about-stats">
-            <div className="stats-grid">
-              <div className="stat-card">
-                <div className="stat-number">{personalData.experiences.length}</div>
-                <div className="stat-label">Years of Experience</div>
-              </div>
-              
-              <div className="stat-card">
-                <div className="stat-number">{personalData.projects.length}</div>
-                <div className="stat-label">Projects Completed</div>
-              </div>
-              
-              <div className="stat-card">
-                <div className="stat-number">{personalData.skills.length}</div>
-                <div className="stat-label">Skills Mastered</div>
-              </div>
-              
-              <div className="stat-card">
-                <div className="stat-number">{personalData.socialLinks.length}</div>
-                <div className="stat-label">Social Networks</div>
-              </div>
-            </div>
-          </div>
+
         </div>
         
         <div className="about-location">
           <div className="location-info">
             <span className="location-icon">📍</span>
-            <span>Based in {personalData.location}</span>
+            <span>Based in San Francisco, CA</span>
           </div>
         </div>
       </div>

@@ -21,8 +21,7 @@ export interface Project {
 
 export interface Skill {
   name: string;
-  level: number; // 0-100
-  category: 'frontend' | 'backend' | 'database' | 'devops' | 'other';
+  category: 'languages' | 'frameworks' | 'tools' | 'course-topics';
 }
 
 export interface SocialLink {
@@ -48,7 +47,7 @@ export interface PersonalData {
   
   // Contact
   email: string;
-  location: string;
+  phone: string;
   socialLinks: SocialLink[];
   
   // Experience
@@ -75,28 +74,13 @@ export const personalData: PersonalData = {
   },
   
   email: "karan@example.com",
-  location: "San Francisco, CA",
+  phone: "+1 (555) 123-4567",
   
   socialLinks: [
-    {
-      name: "GitHub",
-      url: "https://github.com/yourusername",
-      icon: "github"
-    },
     {
       name: "LinkedIn",
       url: "https://linkedin.com/in/yourusername",
       icon: "linkedin"
-    },
-    {
-      name: "Twitter",
-      url: "https://twitter.com/yourusername",
-      icon: "twitter"
-    },
-    {
-      name: "Portfolio",
-      url: "https://yourportfolio.com",
-      icon: "external"
     }
   ],
   
@@ -131,32 +115,39 @@ export const personalData: PersonalData = {
   ],
   
   skills: [
-    // Frontend
-    { name: "HTML/CSS", level: 95, category: "frontend" },
-    { name: "JavaScript", level: 88, category: "frontend" },
-    { name: "AngularJS", level: 75, category: "frontend" },
-    { name: "Flutter", level: 70, category: "frontend" },
+    // Languages
+    { name: "Python", category: "languages" },
+    { name: "Java", category: "languages" },
+    { name: "JavaScript", category: "languages" },
+    { name: "SQL", category: "languages" },
+    { name: "C/C++", category: "languages" },
+    { name: "R", category: "languages" },
     
-    // Backend
-    { name: "Python", level: 85, category: "backend" },
-    { name: "Java", level: 80, category: "backend" },
-    { name: "Node.js", level: 85, category: "backend" },
-    { name: "Flask", level: 75, category: "backend" },
-    { name: "C/C++", level: 70, category: "backend" },
+    // Frameworks
+    { name: "React", category: "frameworks" },
+    { name: "AngularJS", category: "frameworks" },
+    { name: "Node.js", category: "frameworks" },
+    { name: "Flask", category: "frameworks" },
+    { name: "Flutter", category: "frameworks" },
+    { name: "Pandas", category: "frameworks" },
     
-    // Database
-    { name: "SQL", level: 85, category: "database" },
-    { name: "MongoDB", level: 80, category: "database" },
+    // Tools
+    { name: "HTML/CSS", category: "tools" },
+    { name: "MongoDB", category: "tools" },
+    { name: "AWS", category: "tools" },
+    { name: "Google Cloud Platform", category: "tools" },
+    { name: "Git", category: "tools" },
+    { name: "NLTK", category: "tools" },
     
-    // DevOps & Cloud
-    { name: "AWS", level: 75, category: "devops" },
-    { name: "Google Cloud Platform", level: 70, category: "devops" },
-    { name: "Git", level: 90, category: "devops" },
-    
-    // Data Science & ML
-    { name: "Pandas", level: 80, category: "other" },
-    { name: "R", level: 75, category: "other" },
-    { name: "NLTK", level: 70, category: "other" },
+    // Course Topics
+    { name: "Database Systems", category: "course-topics" },
+    { name: "Distributed Systems", category: "course-topics" },
+    { name: "Data Science", category: "course-topics" },
+    { name: "Machine Learning", category: "course-topics" },
+    { name: "Computer Networks", category: "course-topics" },
+    { name: "Software Engineering", category: "course-topics" },
+    { name: "Algorithms & Data Structures", category: "course-topics" },
+    { name: "Operating Systems", category: "course-topics" },
   ],
   
   projects: [

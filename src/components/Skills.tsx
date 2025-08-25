@@ -7,11 +7,10 @@ const Skills: React.FC = () => {
 
   const categories = [
     { id: 'all', label: 'All Skills', icon: '🎯' },
-    { id: 'frontend', label: 'Frontend', icon: '🎨' },
-    { id: 'backend', label: 'Backend', icon: '⚙️' },
-    { id: 'database', label: 'Database', icon: '🗄️' },
-    { id: 'devops', label: 'DevOps', icon: '🚀' },
-    { id: 'other', label: 'Other', icon: '🔧' }
+    { id: 'languages', label: 'Languages', icon: '💻' },
+    { id: 'frameworks', label: 'Frameworks', icon: '⚡' },
+    { id: 'tools', label: 'Tools', icon: '🔧' },
+    { id: 'course-topics', label: 'Course Topics', icon: '📚' }
   ];
 
   const filteredSkills = activeCategory === 'all' 
@@ -32,11 +31,6 @@ const Skills: React.FC = () => {
             >
               <span className="category-icon">{category.icon}</span>
               <span className="category-label">{category.label}</span>
-              <span className="category-count">
-                ({activeCategory === category.id || activeCategory === 'all' 
-                  ? personalData.skills.filter(s => category.id === 'all' || s.category === category.id).length 
-                  : 0})
-              </span>
             </button>
           ))}
         </div>
@@ -44,26 +38,7 @@ const Skills: React.FC = () => {
         <div className="skills-grid">
           {filteredSkills.map((skill, index) => (
             <div key={skill.name} className="skill-card">
-              <div className="skill-header">
-                <h3 className="skill-name">{skill.name}</h3>
-                <span className="skill-level">{skill.level}%</span>
-              </div>
-              
-              <div className="skill-progress">
-                <div className="progress-bar">
-                  <div 
-                    className="progress-fill"
-                    style={{ width: `${skill.level}%` }}
-                  ></div>
-                </div>
-              </div>
-              
-              <div className="skill-category">
-                <span className="category-badge">
-                  {categories.find(cat => cat.id === skill.category)?.icon} 
-                  {categories.find(cat => cat.id === skill.category)?.label}
-                </span>
-              </div>
+              <span className="skill-name">{skill.name}</span>
             </div>
           ))}
         </div>
@@ -73,30 +48,6 @@ const Skills: React.FC = () => {
             <p>No skills found for the selected category.</p>
           </div>
         )}
-        
-        <div className="skills-summary">
-          <div className="summary-card">
-            <h3>Skills Overview</h3>
-            <div className="summary-stats">
-              <div className="summary-stat">
-                <span className="stat-number">{personalData.skills.length}</span>
-                <span className="stat-label">Total Skills</span>
-              </div>
-              <div className="summary-stat">
-                <span className="stat-number">
-                  {Math.round(personalData.skills.reduce((acc, skill) => acc + skill.level, 0) / personalData.skills.length)}
-                </span>
-                <span className="stat-label">Average Level</span>
-              </div>
-              <div className="summary-stat">
-                <span className="stat-number">
-                  {personalData.skills.filter(skill => skill.level >= 80).length}
-                </span>
-                <span className="stat-label">Expert Level</span>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

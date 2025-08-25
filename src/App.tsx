@@ -32,6 +32,9 @@ function App() {
     const heroSection = document.querySelector('#home');
     if (heroSection) {
       heroSection.classList.add('visible');
+      console.log('Hero section made visible');
+    } else {
+      console.log('Hero section not found');
     }
 
     return () => {
