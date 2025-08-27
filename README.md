@@ -18,22 +18,15 @@ A modern, responsive personal portfolio website built with React and TypeScript,
 - **Timeline Design**: Beautiful timeline for work experience
 - **Progress Indicators**: Animated skill progress bars with shimmer effects
 
-## 🛠️ Technologies Used
-
-- **React 18**: Modern React with hooks and functional components
-- **TypeScript**: Type-safe development for better maintainability
-- **CSS3**: Custom CSS with CSS Grid, Flexbox, and advanced animations
-- **Responsive Design**: Mobile-first approach with breakpoint optimization
-- **Performance Optimized**: Minimal dependencies for fast loading
 
 ## 📱 Sections
 
-1. **Hero**: Animated introduction with typing effect and profile image
-2. **About**: Personal information with stats and interests
-3. **Experience**: Timeline of work experience with company details
-4. **Projects**: Filterable project showcase with technology tags
-5. **Skills**: Categorized skills with animated progress bars
-6. **Contact**: Contact form and social media links
+1. **Hero**: Animated introduction with profile image
+2. **About**: Personal information with education and interests
+3. **Experience**: Timeline of work experience with company details - clickable cards allow you to provide more information
+5. **Projects**: Project showcase with technology tags
+6. **Skills**: Categorized skills
+7. **Contact**: Social media links
 
 ## 🚀 Getting Started
 
