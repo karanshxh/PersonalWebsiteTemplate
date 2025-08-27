@@ -6,6 +6,7 @@ export interface Experience {
   location: string;
   period: string;
   description: string;
+  roleOverview: string;
   technologies: string[];
 }
 
@@ -126,6 +127,7 @@ export const personalData: PersonalData = {
       location: "San Francisco, CA",
       period: "2023 - Present",
       description: "Leading development of web applications using React, Node.js, and cloud technologies. Mentoring junior developers and implementing best practices.",
+      roleOverview: "As a Senior Full Stack Developer, I lead the development of complex web applications that serve thousands of users daily. My role involves architecting scalable solutions, mentoring junior developers, and collaborating with cross-functional teams to deliver high-quality software. I've successfully implemented microservices architecture, improved application performance by 40%, and established coding standards that reduced bug reports by 60%. I also conduct code reviews, provide technical guidance, and contribute to the company's technical strategy and roadmap.",
       technologies: ["React", "TypeScript", "Node.js", "AWS", "Docker"]
     },
     {
@@ -135,6 +137,7 @@ export const personalData: PersonalData = {
       location: "New York, NY",
       period: "2021 - 2023",
       description: "Built and maintained web applications using modern JavaScript frameworks. Collaborated with design and product teams to deliver high-quality features.",
+      roleOverview: "During my time at Innovation Labs, I was responsible for developing and maintaining multiple web applications that served diverse client needs. I worked extensively with React and Node.js to build scalable solutions, implemented CI/CD pipelines that reduced deployment time by 70%, and collaborated closely with UX designers to create intuitive user interfaces. I also contributed to the development of internal tools that improved team productivity and participated in agile development processes including sprint planning, daily standups, and retrospectives.",
       technologies: ["React", "JavaScript", "Python", "PostgreSQL", "Git"]
     },
     {
@@ -144,6 +147,7 @@ export const personalData: PersonalData = {
       location: "Los Angeles, CA",
       period: "2020 - 2021",
       description: "Developed responsive websites and web applications. Worked closely with designers to implement pixel-perfect designs.",
+      roleOverview: "At Creative Digital Agency, I specialized in creating responsive and accessible web applications that delivered exceptional user experiences. I worked closely with designers to translate complex designs into functional code, ensuring pixel-perfect implementations across all devices. I developed custom WordPress themes, optimized website performance, and implemented modern CSS techniques including Grid and Flexbox. I also collaborated with the marketing team to implement SEO best practices and analytics tracking.",
       technologies: ["HTML", "CSS", "JavaScript", "React", "WordPress"]
     }
   ],

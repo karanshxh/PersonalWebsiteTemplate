@@ -67,7 +67,7 @@ const Experience: React.FC = () => {
                   <div className="detailed-content">
                     <div className="detailed-description">
                       <h4>Role Overview</h4>
-                      <p>{experience.description}</p>
+                      <p>{experience.roleOverview}</p>
                     </div>
                   </div>
                 </div>

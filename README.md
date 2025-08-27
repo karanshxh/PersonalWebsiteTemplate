@@ -60,7 +60,7 @@ All personal information is stored in `src/data/personalData.ts`. Simply update 
 
 - **Basic Info**: Name, title, subtitle, profile image path
 - **About Section**: Introduction, story, education, interests
-- **Experience**: Work history with companies, roles, and technologies
+- **Experience**: Work history with companies, roles, technologies, and detailed role overviews
 - **Projects**: Project details, images, links, and featured status
 - **Skills**: Categorized skills with proficiency levels
 - **Contact**: Email, location, and social media links
@@ -87,7 +87,8 @@ export const personalData: PersonalData = {
       company: "Company Name",
       location: "Location",
       period: "2023 - Present",
-      description: "Job description...",
+      description: "Brief job description...",
+      roleOverview: "Detailed description of your role, responsibilities, achievements, and impact. This appears in the detailed card when clicked.",
       technologies: ["React", "TypeScript", "Node.js"]
     }
   ],
