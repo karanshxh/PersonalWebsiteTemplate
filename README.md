@@ -1,7 +1,6 @@
 # Personal Website Template
 
-A modern personal portfolio website that is easily customizable and specifically allows you to provide more details about your work experiences and projects beyond what can fit on your resume.
-Easy to set up with your own information in 10 minutes or less!
+A modern, customizable personal portfolio website designed to showcase your work experiences and projects in greater detail than a traditional resume. Quick and easy to set up—add your information in 10 minutes or less!
 
 ## ✨ Features
 
