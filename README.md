@@ -4,19 +4,14 @@ A modern, responsive personal portfolio website built with React and TypeScript,
 
 ## ✨ Features
 
-- **Dark Mode Design**: Elegant dark theme with light blue to light purple gradient accents
-- **Fully Responsive**: Optimized for all devices and screen sizes
 - **Data-Driven**: All content is abstracted to a single configuration file for easy customization
+- **Fully Responsive**: Optimized for all devices and screen sizes
 - **Modern Animations**: Smooth transitions, hover effects, and typing animations
 - **Interactive Sections**: Hero, About, Experience, Projects, Skills, and Contact
-- **Project Showcase**: Filterable projects with featured highlights
-- **Skills Visualization**: Categorized skills with animated progress bars
-- **Contact Form**: Functional contact form with validation
-- **Social Integration**: Easy social media links and professional networking
 
 ## 🎨 Design Highlights
 
-- **Color Scheme**: Dark backgrounds with vibrant light blue to light purple gradients
+- **Color Scheme**: Choose between Light and Dark backgrounds with the option to choose your own thematic colors
 - **Typography**: Modern fonts (Inter for body text, JetBrains Mono for code elements)
 - **Animations**: Smooth fade-ins, slide effects, and interactive hover states
 - **Glass Morphism**: Subtle backdrop blur effects for modern UI elements
@@ -81,12 +76,11 @@ This creates a `build` folder with optimized production files ready for deployme
 All personal information is stored in `src/data/personalData.ts`. Simply update this file with your information:
 
 - **Basic Info**: Name, title, subtitle, profile image path
-- **Theme Configuration**: Dark/light mode and custom color scheme
 - **About Section**: Introduction, story, education, interests
 - **Experience**: Work history with companies, roles, and technologies
 - **Projects**: Project details, images, links, and featured status
 - **Skills**: Categorized skills with proficiency levels
-- **Contact**: Email, phone, and social media links
+- **Contact**: Email, location, and social media links
 
 ### Example Configuration
 ```typescript
@@ -95,15 +89,6 @@ export const personalData: PersonalData = {
   title: "Full Stack Developer",
   subtitle: "I enjoy building sites & apps. My focus is web development.",
   profileImage: "/images/profile.jpg",
-  
-  theme: {
-    mode: 'dark', // 'dark' or 'light'
-    colors: {
-      primary: '#60a5fa',    // Light blue
-      secondary: '#a78bfa',  // Light purple
-      tertiary: '#c084fc'    // Light purple variant
-    }
-  },
   
   about: {
     introduction: "Your introduction...",
@@ -128,59 +113,9 @@ export const personalData: PersonalData = {
 };
 ```
 
-### Theme Customization
-The website supports both dark and light modes with fully customizable colors:
-
-#### Changing Theme Mode
-```typescript
-theme: {
-  mode: 'light', // Change from 'dark' to 'light'
-  colors: {
-    // Your colors here
-  }
-}
-```
-
-#### Customizing Colors
-```typescript
-theme: {
-  mode: 'dark',
-  colors: {
-    primary: '#ff6b35',    // Orange
-    secondary: '#4ecdc4',  // Teal
-    tertiary: '#45b7d1'    // Blue
-  },
-  fonts: {
-    primary: 'Inter',      // Primary font for body text
-    secondary: 'JetBrains Mono'  // Secondary font for code/monospace
-  }
-}
-```
-
-#### Popular Color Schemes
-- **Sunset**: `#ff6b35`, `#f7931e`, `#ffd93d`
-- **Ocean**: `#4ecdc4`, `#45b7d1`, `#96ceb4`
-- **Forest**: `#2d5016`, `#4a7c59`, `#7fb069`
-- **Berry**: `#ff6b9d`, `#c44569`, `#f38181`
-
-#### Customizing Fonts
-```typescript
-fonts: {
-  primary: 'Poppins',      // Any Google Font for body text
-  secondary: 'Fira Code'   // Any Google Font for code/monospace
-}
-```
-
-#### Popular Font Combinations
-- **Modern**: `'Inter'` + `'JetBrains Mono'`
-- **Elegant**: `'Poppins'` + `'Fira Code'`
-- **Classic**: `'Roboto'` + `'Source Code Pro'`
-- **Creative**: `'Montserrat'` + `'Cascadia Code'`
-
 ### Styling
-- **Main Theme**: Update CSS variables in `src/index.css`
-- **Component Styles**: Individual `.css` files in `src/components/`
-- **Dynamic Colors**: Colors are applied automatically from `personalData.ts`
+- **Customizable Styling**: Update CSS variables like themes and fonts in `src/data/personalData.ts`
+- **Colors**: Modify the Theme, Colors, and Fonts!
 
 ### Images
 - Place your profile image in `public/images/profile.jpg`
@@ -243,37 +178,21 @@ This website is optimized for deployment on platforms like:
 4. Add corresponding data to `personalData.ts`
 
 ### Changing Colors
-Update the CSS variables in `src/index.css`:
-```css
-:root {
-  --accent-primary: #your-color;
-  --accent-secondary: #your-color;
-  --accent-tertiary: #your-color;
-  --accent-gradient: linear-gradient(135deg, #color1 0%, #color2 50%, #color3 100%);
-}
+Update the CSS variables in `src/data/personalData.ts`:
 ```
-
-### Adding Animations
-The website includes several animation classes:
-- `.fade-in`: Fade in from bottom
-- `.slide-in-left`: Slide in from left
-- `.slide-in-right`: Slide in from right
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
+colors: {
+      primary: '#72efdd',
+      secondary: '#48bfe3',
+      tertiary: '#6930c3'
+    },
+```
 
 ## 🤝 Contributing
 
-Feel free to fork this project and customize it for your own portfolio. If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
+Feel free to fork this project and customize it for your own portfolio. If you find any bugs or have suggestions for improvements, please reach out at kshah2003@gmail.com
 
-## 📞 Support
 
-For questions or support, feel free to reach out through the contact form on the website or create an issue in the repository.
-
----
-
-**Built with ❤️ using React, TypeScript, and modern web technologies**
+**Built using TypeScript**
 
 ## 🎉 Quick Start for New Users
 
