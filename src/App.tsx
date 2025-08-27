@@ -6,10 +6,15 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
+import { applyTheme, loadGoogleFonts } from './utils/themeUtils';
 import './App.css';
 
 function App() {
   useEffect(() => {
+    // Load Google Fonts and apply theme from personalData
+    loadGoogleFonts();
+    applyTheme();
+
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'

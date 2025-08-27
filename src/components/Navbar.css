@@ -4,14 +4,14 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(10, 10, 10, 0.8);
+  background: var(--navbar-bg);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-primary);
   transition: var(--transition-normal);
 }
 
 .navbar.scrolled {
-  background: rgba(10, 10, 10, 0.95);
+  background: var(--navbar-bg-scrolled);
   box-shadow: 0 4px 20px var(--shadow-primary);
 }
 
@@ -124,7 +124,7 @@
     top: 100%;
     left: 0;
     right: 0;
-    background: rgba(10, 10, 10, 0.95);
+    background: var(--navbar-bg-scrolled);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-primary);
     transform: translateY(-100%);
