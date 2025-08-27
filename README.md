@@ -8,15 +8,7 @@ A modern, responsive personal portfolio website built with React and TypeScript,
 - **Fully Responsive**: Optimized for all devices and screen sizes
 - **Modern Animations**: Smooth transitions, hover effects, and typing animations
 - **Interactive Sections**: Hero, About, Experience, Projects, Skills, and Contact
-
-## 🎨 Design Highlights
-
 - **Color Scheme**: Choose between Light and Dark backgrounds with the option to choose your own thematic colors
-- **Typography**: Modern fonts (Inter for body text, JetBrains Mono for code elements)
-- **Animations**: Smooth fade-ins, slide effects, and interactive hover states
-- **Glass Morphism**: Subtle backdrop blur effects for modern UI elements
-- **Timeline Design**: Beautiful timeline for work experience
-- **Progress Indicators**: Animated skill progress bars with shimmer effects
 
 
 ## 📱 Sections
@@ -114,27 +106,6 @@ export const personalData: PersonalData = {
 - Place your profile image in `public/images/profile.jpg`
 - Add project images to `public/images/projects/`
 - Update image paths in the data configuration
-
-## 📦 Project Structure
-
-```
-src/
-├── components/          # React components
-│   ├── Navbar.tsx      # Navigation bar
-│   ├── Hero.tsx        # Hero section
-│   ├── About.tsx       # About section
-│   ├── Experience.tsx  # Work experience
-│   ├── Projects.tsx    # Projects showcase
-│   ├── Skills.tsx      # Skills section
-│   ├── Contact.tsx     # Contact form
-│   └── *.css           # Component styles
-├── data/
-│   └── personalData.ts # All personal information
-├── App.tsx             # Main app component
-├── App.css             # App-specific styles
-├── index.tsx           # React entry point
-└── index.css           # Global styles
-```
 
 ## 🌐 Deployment
 
