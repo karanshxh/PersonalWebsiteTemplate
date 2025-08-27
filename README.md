@@ -1,14 +1,13 @@
 # Personal Website Template
 
-A modern, responsive personal portfolio website built with React and TypeScript, featuring a beautiful dark theme with light blue to light purple gradients.
+A modern personal portfolio website that is easily customizable and specifically allows you to provide more details about your work experiences and projects beyond what can fit on your resume.
+Easy to set up with your own information in 10 minutes or less!
 
 ## ✨ Features
 
-- **Data-Driven**: All content is abstracted to a single configuration file for easy customization
-- **Fully Responsive**: Optimized for all devices and screen sizes
-- **Modern Animations**: Smooth transitions, hover effects, and typing animations
+- **Data-Driven**: All personizable content is abstracted to a single configuration file that makes it easy for you to customize the whole website in one place
 - **Interactive Sections**: Hero, About, Experience, Projects, Skills, and Contact
-- **Color Scheme**: Choose between Light and Dark backgrounds with the option to choose your own thematic colors
+- **Color Scheme**: Choose between Light and Dark backgrounds with the option to choose your own thematic colors to make the website truly unique
 
 
 ## 📱 Sections
