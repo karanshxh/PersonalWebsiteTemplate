@@ -1,0 +1,129 @@
+.skills {
+  background: var(--bg-primary);
+}
+
+.skills-filter {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-3xl);
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  color: var(--text-secondary);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  font-family: var(--font-primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-normal);
+  backdrop-filter: blur(10px);
+}
+
+.category-btn:hover {
+  border-color: var(--accent-primary);
+  color: var(--text-primary);
+}
+
+.category-btn.active {
+  background: var(--accent-gradient);
+  border-color: var(--accent-primary);
+  color: var(--text-primary);
+}
+
+.category-icon {
+  font-size: 1rem;
+}
+
+.category-count {
+  opacity: 0.8;
+  font-size: 0.8rem;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-3xl);
+  justify-content: center;
+}
+
+.skill-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-sm) var(--spacing-md);
+  transition: var(--transition-normal);
+  backdrop-filter: blur(10px);
+  display: inline-block;
+}
+
+.skill-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-primary);
+  box-shadow: 0 8px 20px var(--shadow-primary);
+}
+
+.skill-name {
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0;
+  white-space: nowrap;
+}
+
+
+
+.no-skills {
+  text-align: center;
+  padding: var(--spacing-3xl);
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .skills-filter {
+    gap: var(--spacing-sm);
+  }
+
+  .category-btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 0.8rem;
+  }
+
+  .summary-stats {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .summary-card {
+    padding: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-card {
+    padding: var(--spacing-md);
+  }
+
+  .skill-name {
+    font-size: 1rem;
+  }
+
+  .category-btn {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    text-align: center;
+  }
+}
