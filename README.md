@@ -81,11 +81,12 @@ This creates a `build` folder with optimized production files ready for deployme
 All personal information is stored in `src/data/personalData.ts`. Simply update this file with your information:
 
 - **Basic Info**: Name, title, subtitle, profile image path
+- **Theme Configuration**: Dark/light mode and custom color scheme
 - **About Section**: Introduction, story, education, interests
 - **Experience**: Work history with companies, roles, and technologies
 - **Projects**: Project details, images, links, and featured status
 - **Skills**: Categorized skills with proficiency levels
-- **Contact**: Email, location, and social media links
+- **Contact**: Email, phone, and social media links
 
 ### Example Configuration
 ```typescript
@@ -94,6 +95,15 @@ export const personalData: PersonalData = {
   title: "Full Stack Developer",
   subtitle: "I enjoy building sites & apps. My focus is web development.",
   profileImage: "/images/profile.jpg",
+  
+  theme: {
+    mode: 'dark', // 'dark' or 'light'
+    colors: {
+      primary: '#60a5fa',    // Light blue
+      secondary: '#a78bfa',  // Light purple
+      tertiary: '#c084fc'    // Light purple variant
+    }
+  },
   
   about: {
     introduction: "Your introduction...",
@@ -118,10 +128,59 @@ export const personalData: PersonalData = {
 };
 ```
 
+### Theme Customization
+The website supports both dark and light modes with fully customizable colors:
+
+#### Changing Theme Mode
+```typescript
+theme: {
+  mode: 'light', // Change from 'dark' to 'light'
+  colors: {
+    // Your colors here
+  }
+}
+```
+
+#### Customizing Colors
+```typescript
+theme: {
+  mode: 'dark',
+  colors: {
+    primary: '#ff6b35',    // Orange
+    secondary: '#4ecdc4',  // Teal
+    tertiary: '#45b7d1'    // Blue
+  },
+  fonts: {
+    primary: 'Inter',      // Primary font for body text
+    secondary: 'JetBrains Mono'  // Secondary font for code/monospace
+  }
+}
+```
+
+#### Popular Color Schemes
+- **Sunset**: `#ff6b35`, `#f7931e`, `#ffd93d`
+- **Ocean**: `#4ecdc4`, `#45b7d1`, `#96ceb4`
+- **Forest**: `#2d5016`, `#4a7c59`, `#7fb069`
+- **Berry**: `#ff6b9d`, `#c44569`, `#f38181`
+
+#### Customizing Fonts
+```typescript
+fonts: {
+  primary: 'Poppins',      // Any Google Font for body text
+  secondary: 'Fira Code'   // Any Google Font for code/monospace
+}
+```
+
+#### Popular Font Combinations
+- **Modern**: `'Inter'` + `'JetBrains Mono'`
+- **Elegant**: `'Poppins'` + `'Fira Code'`
+- **Classic**: `'Roboto'` + `'Source Code Pro'`
+- **Creative**: `'Montserrat'` + `'Cascadia Code'`
+
 ### Styling
 - **Main Theme**: Update CSS variables in `src/index.css`
 - **Component Styles**: Individual `.css` files in `src/components/`
-- **Colors**: Modify the `--accent-gradient` variable for different color schemes
+- **Dynamic Colors**: Colors are applied automatically from `personalData.ts`
 
 ### Images
 - Place your profile image in `public/images/profile.jpg`

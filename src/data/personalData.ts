@@ -1,3 +1,4 @@
+// DO NOT MODIFY ANYTHING FROM LINE 1 TO LINE 73 UNLESS YOU KNOW WHAT YOU ARE DOING
 export interface Experience {
   id: string;
   title: string;
@@ -16,7 +17,6 @@ export interface Project {
   technologies: string[];
   githubUrl?: string;
   liveUrl?: string;
-  featured: boolean;
 }
 
 export interface Skill {
@@ -36,6 +36,20 @@ export interface PersonalData {
   title: string;
   subtitle: string;
   profileImage: string;
+  
+  // Theme Configuration
+  theme: {
+    mode: 'dark' | 'light';
+    colors: {
+      primary: string;
+      secondary: string;
+      tertiary: string;
+    };
+    fonts: {
+      primary: string;
+      secondary: string;
+    };
+  };
   
   // About
   about: {
@@ -60,11 +74,26 @@ export interface PersonalData {
   projects: Project[];
 }
 
+
+// MODIFY BELOW THIS LINE WITH YOUR OWN DATA
 export const personalData: PersonalData = {
   name: "John Doe",
   title: "Full Stack Developer",
   subtitle: "I enjoy building sites & apps. My focus is web development.",
-  profileImage: "/images/profile.jpg",
+  profileImage: "/images/profile.jpg", // path to your profile image
+  
+  theme: {
+    mode: 'dark', //'dark' or 'light'
+    colors: {
+      primary: '#72efdd',
+      secondary: '#48bfe3',
+      tertiary: '#6930c3'
+    },
+    fonts: {
+      primary: 'Inter',      // Primary font for body text
+      secondary: 'JetBrains Mono'  // Secondary font for code/monospace
+    }
+  },
   
   about: {
     introduction: "Hello, I'm John. I'm a full-stack developer with experience in modern web technologies. I enjoy building sites & apps. My focus is web development.",
@@ -127,9 +156,11 @@ export const personalData: PersonalData = {
     { name: "SQL", category: "languages" },
     { name: "C/C++", category: "languages" },
     { name: "R", category: "languages" },
+    { name: "HTML/CSS", category: "tools" },
     
     // Frameworks
     { name: "React", category: "frameworks" },
+    { name: "TypeScript", category: "frameworks" },
     { name: "AngularJS", category: "frameworks" },
     { name: "Node.js", category: "frameworks" },
     { name: "Flask", category: "frameworks" },
@@ -137,7 +168,7 @@ export const personalData: PersonalData = {
     { name: "Pandas", category: "frameworks" },
     
     // Tools
-    { name: "HTML/CSS", category: "tools" },
+    { name: "Pytorch", category: "tools" },
     { name: "MongoDB", category: "tools" },
     { name: "AWS", category: "tools" },
     { name: "Google Cloud Platform", category: "tools" },
@@ -164,7 +195,6 @@ export const personalData: PersonalData = {
       technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
       githubUrl: "https://github.com/johndoe/ecommerce-platform",
       liveUrl: "https://ecommerce-demo.com",
-      featured: true
     },
     {
       id: "2",
@@ -174,7 +204,6 @@ export const personalData: PersonalData = {
       technologies: ["React", "TypeScript", "Socket.io", "MongoDB", "Express"],
       githubUrl: "https://github.com/johndoe/task-manager",
       liveUrl: "https://task-manager-demo.com",
-      featured: true
     },
     {
       id: "3",
@@ -184,7 +213,6 @@ export const personalData: PersonalData = {
       technologies: ["React", "Chart.js", "OpenWeather API", "CSS3", "Responsive Design"],
       githubUrl: "https://github.com/johndoe/weather-dashboard",
       liveUrl: "https://weather-demo.com",
-      featured: false
     },
     {
       id: "4",
@@ -194,7 +222,6 @@ export const personalData: PersonalData = {
       technologies: ["React", "TypeScript", "CSS3", "Framer Motion", "Vercel"],
       githubUrl: "https://github.com/johndoe/portfolio",
       liveUrl: "https://portfolio-demo.com",
-      featured: false
     },
     {
       id: "5",
@@ -204,7 +231,6 @@ export const personalData: PersonalData = {
       technologies: ["Next.js", "MongoDB", "NextAuth", "Tailwind CSS", "Vercel"],
       githubUrl: "https://github.com/johndoe/blog-platform",
       liveUrl: "https://blog-demo.com",
-      featured: false
     },
     {
       id: "6",
@@ -214,7 +240,6 @@ export const personalData: PersonalData = {
       technologies: ["React", "Socket.io", "Node.js", "MongoDB", "AWS S3"],
       githubUrl: "https://github.com/johndoe/chat-app",
       liveUrl: "https://chat-demo.com",
-      featured: false
     }
   ]
 };
